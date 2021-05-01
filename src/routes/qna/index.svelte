@@ -61,7 +61,6 @@
       return;
     }
     const newMessage = {type: 'chat', uid, nickname, message: messageText, selected: false, my: false};
-    messageText = '';
 
     // send to server
     sendMessage(newMessage);
@@ -69,6 +68,9 @@
     // append new message to view
     newMessage.my = true;
     appendMessage(newMessage);
+
+    // init message text
+    messageText = '';
   }
 
   function welcomeNewUser(nickname) {
@@ -77,14 +79,14 @@
 </script>
 
 
-<div class="min-h-screen bg-gray-100 flex justify-between">
+<div class="h-screen h-screen-ios bg-gray-100 flex justify-between">
   <!-- selected messages -->
   <div class="hidden flex-1 bg-indigo-200">
     <h1>Selected Messages</h1>
   </div>
 
   <!-- real time messages -->
-  <div class="flex-1 bg-red-200 flex flex-col justify-between min-h-screen">
+  <div class="flex-1 bg-red-200 flex flex-col justify-between h-screen h-screen-ios">
     <h1>Real-time Messages (nickname:{nickname})</h1>
     <div class="flex-1 bg-gray-200 flex flex-col overflow-y-auto p-2" bind:this={container}>
 
@@ -124,7 +126,8 @@
           <div class="flex-1">
             <div class="uppercase text-sm text-gray-400">message</div>
             <div class="flex">
-              <input class="text-lg p-2 rounded-l w-full focus:outline-none focus:placeholder-gray-300 placeholder-gray-400" type="text" placeholder="write messages"
+              <input class="text-lg p-2 rounded-l w-full focus:outline-none focus:placeholder-gray-300 placeholder-gray-400"
+                     type="text" placeholder="write messages"
                      bind:value={messageText}
                      bind:this={messageInput}>
               <button class="bg-gray-200 px-2 rounded-r">Send</button>

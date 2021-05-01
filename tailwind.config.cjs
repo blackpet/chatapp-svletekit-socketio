@@ -1,3 +1,5 @@
+const iOSHeight = require('@rvxlab/tailwind-plugin-ios-full-height');
+
 module.exports = {
 	mode: "jit",
 	purge: [
@@ -6,5 +8,7 @@ module.exports = {
 	theme: {
 		extend: {},
 	},
-	plugins: [],
+	plugins: [
+		iOSHeight,
+	],
 };
