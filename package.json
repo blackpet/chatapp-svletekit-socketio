@@ -29,6 +29,7 @@
     "@fontsource/fira-mono": "^4.2.2",
     "@lukeed/uuid": "^2.0.0",
     "bufferutil": "^4.0.3",
-    "cookie": "^0.4.1"
+    "cookie": "^0.4.1",
+    "utf-8-validate": "^5.0.4"
   }
 }
