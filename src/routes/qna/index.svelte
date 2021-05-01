@@ -50,7 +50,6 @@
 
   async function appendMessage(message) {
     messages = [...messages, message];
-    messageText = '';
 
     await tick();
     container.scrollTop = container.scrollHeight;
@@ -62,6 +61,7 @@
       return;
     }
     const newMessage = {type: 'chat', uid, nickname, message: messageText, selected: false, my: false};
+    messageText = '';
 
     // send to server
     sendMessage(newMessage);
