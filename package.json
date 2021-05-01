@@ -1,5 +1,5 @@
 {
-  "name": "Live K",
+  "name": "simple-chatapp",
   "version": "0.0.1",
   "scripts": {
     "dev": "svelte-kit dev --port 7000 --host 0.0.0.0",
