@@ -25,16 +25,16 @@
 </script>
 
 <svelte:head>
-	<title>KIRD Live-K</title>
+	<title>Simple Chatapp</title>
 </svelte:head>
 
 {#if loading}
-	<div>Connecting to Live-K...</div>
+	<div>Connecting to Server...</div>
 {:else}
 
 
 	<div class="grid place-content-center h-screen bg-gray-300">
-		<h1 class="text-center text-3xl font-bold mb-8">KIRD Live-K</h1>
+		<h1 class="text-center text-3xl font-bold mb-8">Simple Chatapp</h1>
 		<div class="bg-gray-100 rounded-xl p-16 pt-8 shadow-xl w-[500px]">
 
 			{#if !$user.isSignIn}
