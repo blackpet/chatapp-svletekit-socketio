@@ -77,14 +77,14 @@
 </script>
 
 
-<div class="h-screen bg-gray-100 flex justify-between">
+<div class="min-h-screen bg-gray-100 flex justify-between">
   <!-- selected messages -->
   <div class="hidden flex-1 bg-indigo-200">
     <h1>Selected Messages</h1>
   </div>
 
   <!-- real time messages -->
-  <div class="flex-1 bg-red-200 flex flex-col justify-between h-screen">
+  <div class="flex-1 bg-red-200 flex flex-col justify-between min-h-screen">
     <h1>Real-time Messages (nickname:{nickname})</h1>
     <div class="flex-1 bg-gray-200 flex flex-col overflow-y-auto p-2" bind:this={container}>
 
